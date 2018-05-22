@@ -4,7 +4,7 @@
 <title>3 and D Portfolio</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="shortcut icon" href="3andD-Logo-Small.png">
+<link rel="shortcut icon" href="three-logo.png">
 <style>
      * {
         margin: 0;
@@ -179,6 +179,51 @@ a {
 .D {
     position: relative;
     top: 1rem;
+}
+
+.nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    position: absolute;
+    top: 25px;
+    left: 20px;
+    height: 10%;
+    width: 10%;
+}
+
+.nav-toggle-label span, 
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    display: block;
+    background-color:darkblue;
+    height: 2px;
+    width: 2em;
+    position: relative;
+    top: 10px;
+}
+
+.nav-toggle-label span::before, 
+.nav-toggle-label span::after {
+    content: '';
+    position: absolute;
+}
+
+.nav-toggle-label span::before {
+    bottom: 5px;
+}
+
+.nav-toggle-label span::after {
+    top: 20px;
+}
+
+@media screen and (min-width: 900px) {
+    .nav-toggle-label span, 
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    display: none;
+}
 }
 /* End Nav */
 
