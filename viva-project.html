@@ -6,12 +6,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="shortcut icon" href="3andD-Logo-Small.png">
 <style>
-    * {
+     * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
     }
-    
 
     .top-nav {
         display: flex;
@@ -19,7 +18,47 @@
         color: #1F3371;
         font-weight: bold;
         justify-content: space-around;
+
     }
+
+    @media screen and (max-width: 900px) {
+        .top-nav {
+            display: none;
+        }
+
+        .nav-toggle:checked ~ .top-nav {
+            display: initial;
+            position: relative;
+            top: 40px;
+            
+            
+        }
+
+         
+    }
+
+    .column-2 {
+    text-align: center;
+    width: 5rem;
+    list-style: none;
+    margin-top: 3%;
+    position: relative;
+    bottom: 2rem;
+}
+
+.column-2:hover {
+    opacity: .5;
+}
+
+@media screen and (max-width: 900px) {
+    .column-2 {
+        text-align: initial;
+        margin-left: 4%;
+        margin-bottom: 5%;
+    }
+}
+
+
 
     .logo {
         color: #1F3371;
@@ -43,6 +82,13 @@
         }
     }
 
+    @media screen and (max-width: 900px) {
+        .logo {
+            background-color: white;
+            margin-bottom: 3rem;
+        }
+    }
+
     .logo h1 {
         font-size: 2em;
     }
@@ -53,17 +99,71 @@
         bottom: .4rem;
     }
 
-      .column-2 {
-    text-align: center;
-    width: 5rem;
-    list-style: none;
-    margin-top: 3%;
+    .list-left {
     position: relative;
-    bottom: 2rem;
+    right: 50%;
 }
 
-.column-2:hover {
-    opacity: .5;
+ 
+
+.list-right {
+    position: relative;
+    left: 50%;
+}
+
+@media screen and (max-width: 900px) {
+        .list-left {
+            right: 0;
+        }
+
+        .list-right {
+            left: 0;
+        }
+    }
+
+    .nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    position: absolute;
+    top: 25px;
+    left: 20px;
+    height: 10%;
+    width: 10%;
+}
+
+.nav-toggle-label span, 
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    display: block;
+    background-color:darkblue;
+    height: 2px;
+    width: 2em;
+    position: relative;
+    top: 10px;
+}
+
+.nav-toggle-label span::before, 
+.nav-toggle-label span::after {
+    content: '';
+    position: absolute;
+}
+
+.nav-toggle-label span::before {
+    bottom: 5px;
+}
+
+.nav-toggle-label span::after {
+    top: 20px;
+}
+
+@media screen and (min-width: 900px) {
+    .nav-toggle-label span, 
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    display: none;
+}
 }
 
 a {
@@ -80,59 +180,7 @@ a {
     position: relative;
     top: 1rem;
 }
-
-.list-left {
-    position: relative;
-    right: 50%;
-}
-
-.list-right {
-    position: relative;
-    left: 50%;
-}
-
-.row {
-    display: flex;
-    width: 100vw;
-    margin-top: 3%;
-    margin-bottom: 3%;
-    
-}
-
-.work-images {
-    display: block;
-    margin: 0 auto;
-    width: 90%;
-}
-
-.futura-text {
-    font-family: "futura", sans-serif;
-}
-
-.headline {
-    text-align: center;
-    color: #1F3371;
-    margin-top: 3%;
-}
-
-.work-paragraph {
-    width: 80%;
-    text-align: center;
-    margin-top: 5%; 
-}
-
-.viva-margin {
-    margin-left: 7%;
-}
-
-.futura-margin {
-    margin-left: 10%;
-
-}
-
-.bliss-margin {
-    margin-left: 10%;
-}
+/* End Nav */
 
 /* End Nav */
 
@@ -220,13 +268,51 @@ a {
 
 /* footer end */
 
+.headline {
+    color: #1F3371;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
 .paragraph {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
+}
+
+.viva-browser {
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5%;
+    z-index: 1;
+    position: relative;
+    
+}
+
+.rectangle {
+    position: absolute;
+    top: 26rem;
+    width: 100%;
+    height: 125%;
+    z-index: -5;
+}
+
+.full-screen {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    display: block;
+    
 }
 </style>
 </head>
 <body>
-        <nav>
+    <nav>
                 <div class="logo">
                     <h1><a href="index.html"><span class="three">3</span><span class="ampersand">&</span><span class="D">D</span></a></h1>
                 </div>
@@ -236,27 +322,16 @@ a {
                     <li class="column-2"><a href="contact.html"><span class="list-right">Contact</span></a></li>
                     <li class="column-2"><a href="plans.html">About</a></li>
                 </ul>
-            </nav>
-        <section>
-            <h1 class="futura-text headline">Our Work</h1>
-            <p class="futura-text paragraph">Take a look at some of our work to see what we can do for you. All of our websites are built from the ground up, tailored to your needs. We provide multiple content management solutions, including Wordpress.</p>
-        </section>
-        
-        <div class="row">
-            <div class="column">
-                <a href="viva-project.html"><img src="VIVA Header Work Crop.png" class="work-images"></a>
-                <p class="work-paragraph futura-text viva-margin">Vancouver Island Vegan Association Homepage Redesign</p>
-            </div>
-            <div class="column">
-                <a href="https://www.behance.net/gallery/65059621/Cafe-Futura-Website"><img src="Cafe Futura Work Crop.png" class="work-images"></a>
-                <p class="work-paragraph futura-text futura-margin">Cafe Futura Design</p>
-            </div>
-            <div class="column">
-                <a href="https://www.behance.net/gallery/65028307/Cafe-Bliss-Redesign"><img src="Cafe Bliss Work Crop.png" class="work-images"></a>
-                <p class="work-paragraph futura-text bliss-margin">Cafe Bliss Homepage Redesign</p>
-            </div>
-        </div>
-        <footer class="footer">
+    </nav>
+    <section>
+        <h1 class="futura-text text-align headline">Vancouver Island Vegan Association Redesign</h1>
+        <p class="futura-text paragraph">This redesign of the Vancouver Island Associatoin homepage was created with a focus on clean, minimal elements that seemlessly flow into one another other.</p>
+    </section>
+    <img src="viva-browser.png" class="viva-browser">
+    <img src="rectangle-background.png" class="rectangle">
+    <img src="viva-full-screen.png" class="full-screen">
+
+    <footer class="footer">
                 <div class="footer-row">
                 <div class="footer-contact footer-column">
                     <h3 class="futura-text contact-text">Social Media</h3>
