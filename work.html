@@ -13,54 +13,13 @@
     }
     
 
-
     .top-nav {
         display: flex;
         font-family: "futura", sans-serif;
         color: #1F3371;
         font-weight: bold;
         justify-content: space-around;
-
     }
-
-    @media screen and (max-width: 900px) {
-        .top-nav {
-            display: none;
-        }
-
-        .nav-toggle:checked ~ .top-nav {
-            display: initial;
-            position: relative;
-            top: 40px;
-            
-            
-        }
-
-         
-    }
-
-    .column-2 {
-    text-align: center;
-    width: 5rem;
-    list-style: none;
-    margin-top: 3%;
-    position: relative;
-    bottom: 2rem;
-}
-
-.column-2:hover {
-    opacity: .5;
-}
-
-@media screen and (max-width: 900px) {
-    .column-2 {
-        text-align: initial;
-        margin-left: 4%;
-        margin-bottom: 5%;
-    }
-}
-
-
 
     .logo {
         color: #1F3371;
@@ -84,13 +43,6 @@
         }
     }
 
-    @media screen and (max-width: 900px) {
-        .logo {
-            background-color: white;
-            margin-bottom: 3rem;
-        }
-    }
-
     .logo h1 {
         font-size: 2em;
     }
@@ -101,27 +53,91 @@
         bottom: .4rem;
     }
 
-    .list-left {
+      .column-2 {
+    text-align: center;
+    width: 5rem;
+    list-style: none;
+    margin-top: 3%;
+    position: relative;
+    bottom: 2rem;
+}
+
+.column-2:hover {
+    opacity: .5;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.three {
+    position: relative;
+    top: -1rem;
+}
+
+.D {
+    position: relative;
+    top: 1rem;
+}
+
+.list-left {
     position: relative;
     right: 50%;
 }
-
- 
 
 .list-right {
     position: relative;
     left: 50%;
 }
 
-@media screen and (max-width: 900px) {
-        .list-left {
-            right: 0;
-        }
+.row {
+    display: flex;
+    width: 100vw;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    
+}
 
-        .list-right {
-            left: 0;
-        }
-    }
+.work-images {
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+    transition: transform .2s;
+}
+
+.work-images:hover {
+    transform: scale(1.1);
+}
+
+.futura-text {
+    font-family: "futura", sans-serif;
+}
+
+.headline {
+    text-align: center;
+    color: #1F3371;
+    margin-top: 3%;
+}
+
+.work-paragraph {
+    width: 80%;
+    text-align: center;
+    margin-top: 5%; 
+}
+
+.viva-margin {
+    margin-left: 7%;
+}
+
+.futura-margin {
+    margin-left: 10%;
+
+}
+
+.bliss-margin {
+    margin-left: 10%;
+}
 
 .nav-toggle {
     display: none;
@@ -271,9 +287,6 @@
                     <li class="column-2"><a href="plans.html">About</a></li>
                 </ul>
             </nav>
-            <label for="nav-toggle" class="nav-toggle-label">
-                <span></span>
-            </label>
         <section>
             <h1 class="futura-text headline">Our Work</h1>
             <p class="futura-text paragraph">Take a look at some of our work to see what we can do for you. All of our websites are built from the ground up, tailored to your needs. We provide multiple content management solutions, including Wordpress.</p>
