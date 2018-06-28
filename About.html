@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<hmtl>
+<head>
+<title>3 and D Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="three-logo.png">
+<style>
+     * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .top-nav {
+        display: flex;
+        font-family: "futura", sans-serif;
+        color: #1F3371;
+        font-weight: bold;
+        justify-content: space-around;
+
+    }
+
+    @media screen and (max-width: 900px) {
+        .top-nav {
+            display: none;
+        }
+
+        .nav-toggle:checked ~ .top-nav {
+            display: initial;
+            position: relative;
+            top: 40px;
+            
+            
+        }
+
+         
+    }
+
+    .column-2 {
+    text-align: center;
+    width: 5rem;
+    list-style: none;
+    margin-top: 3%;
+    position: relative;
+    bottom: 2rem;
+}
+
+.column-2:hover {
+    opacity: .5;
+}
+
+@media screen and (max-width: 900px) {
+    .column-2 {
+        text-align: initial;
+        margin-left: 4%;
+        margin-bottom: 5%;
+    }
+}
+
+
+
+    .logo {
+        color: #1F3371;
+        font-family: "futura", sans-serif;
+        width: 5em;
+        margin: 0 auto;
+        position: relative;
+        top: 2em;
+        left: .5em;
+    }
+
+    @media screen and (max-width: 895px) {
+        .logo {
+            left: .75em;
+        }
+    }
+
+    @media screen and (max-width: 800px) {
+        .logo {
+            top: 1.5em;
+        }
+    }
+
+    @media screen and (max-width: 900px) {
+        .logo {
+            background-color: white;
+            margin-bottom: 3rem;
+        }
+    }
+
+    .logo h1 {
+        font-size: 2em;
+    }
+    
+    .ampersand {
+        font-size: 50%;
+        position: relative;
+        bottom: .4rem;
+    }
+
+    .list-left {
+    position: relative;
+    right: 50%;
+}
+
+ 
+
+.list-right {
+    position: relative;
+    left: 50%;
+}
+
+@media screen and (max-width: 900px) {
+        .list-left {
+            right: 0;
+        }
+
+        .list-right {
+            left: 0;
+        }
+    }
+
+    .nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    position: absolute;
+    top: 25px;
+    left: 20px;
+    height: 10%;
+    width: 10%;
+}
+
+.nav-toggle-label span, 
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    display: block;
+    background-color:darkblue;
+    height: 2px;
+    width: 2em;
+    position: relative;
+    top: 10px;
+}
+
+.nav-toggle-label span::before, 
+.nav-toggle-label span::after {
+    content: '';
+    position: absolute;
+}
+
+.nav-toggle-label span::before {
+    bottom: 5px;
+}
+
+.nav-toggle-label span::after {
+    top: 20px;
+}
+
+@media screen and (min-width: 900px) {
+    .nav-toggle-label span, 
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    display: none;
+}
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.three {
+    position: relative;
+    top: -1rem;
+}
+
+.D {
+    position: relative;
+    top: 1rem;
+}
+
+.nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    position: absolute;
+    top: 25px;
+    left: 20px;
+    height: 10%;
+    width: 10%;
+}
+
+.nav-toggle-label span, 
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    display: block;
+    background-color:darkblue;
+    height: 2px;
+    width: 2em;
+    position: relative;
+    top: 10px;
+}
+
+.nav-toggle-label span::before, 
+.nav-toggle-label span::after {
+    content: '';
+    position: absolute;
+}
+
+.nav-toggle-label span::before {
+    bottom: 5px;
+}
+
+.nav-toggle-label span::after {
+    top: 20px;
+}
+
+@media screen and (min-width: 900px) {
+    .nav-toggle-label span, 
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    display: none;
+}
+}
+/* End Nav */
+
+.futura-text {
+    font-family: "futura", sans-serif;
+}
+
+.headline {
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    color: #1F3371;
+}
+
+section p {
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 5%;
+    width: 80%;
+    line-height: 200%;
+}
+
+/* footer begin */
+
+.footer {
+    background: url("Mountains-Footer.png");
+}
+
+.contact-text {
+    color:white;
+}
+
+.footer-nav {
+    color: white;
+    
+}
+
+.footer-column {
+    flex: 1;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    
+}
+
+@media screen and (max-width: 700px) {
+    .footer-column {
+        width: 80%;
+        margin-top: 5%;
+        margin-bottom: 7%;
+    }
+}
+
+.footer-row {
+    display: flex;
+    width: 100%; 
+    text-align: center;
+      
+}
+
+@media screen and (max-width: 700px) {
+    .footer-row {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.footer-name {
+    color: white;
+    font-weight: normal;
+    text-align: center;
+    position: relative;
+    bottom: 2rem;
+}
+
+.footer-icons {
+    width: 10%;
+}
+
+/* footer end */
+</style>
+</head>
+<body>
+        <nav>
+                <div class="logo">
+                    <h1><a href="index.html"><span class="three">3</span><span class="ampersand">&</span><span class="D">D</span></a></h1>
+                </div>
+                <ul class="top-nav">
+                    <li class="column-2"><a href="work.html">Work</a></li>
+                    <li class="column-2"><a href="plans.html"><span class="list-left">Plans</span></a></li>
+                    <li class="column-2"><a href="contact.html"><span class="list-right">Contact</span></a></li>
+                    <li class="column-2"><a href="plans.html">About</a></li>
+                </ul>
+            </nav>
+        <section>
+            <h1 class="futura-text headline">Coming Soon</h1>
+        </section>
+        <footer class="footer">
+                <div class="footer-row">
+                <div class="footer-contact footer-column">
+                    <h3 class="futura-text contact-text">Social Media</h3>
+                    <br>
+                    <img src="twitter-icon-white-2.png" class="footer-icons">
+                    <img src="instagram-icon-white.png" class="footer-icons">
+                    <img src="facebook-icon-white.png" class="footer-icons">
+                </div>
+                <div class="footer-nav futura-text footer-column">
+                    <h3><a href="work.html">Work</a></h3>
+                    <br>
+                    <h3><a href="plans.html">Plans</a></h3>
+                    <br>
+                    <h3><a href="plans.html">About</a></h3>
+                </div>
+                <div class="footer-contact footer-column futura-text contact-text">
+                    <h4>Email: 3andddigital@gmail.com</h4>
+                    <br>
+                    <!--<h4>Phone: (879)555-5555</h4>-->
+                </div>
+                </div>
+                <div class="footer-name futura-text">
+                    <p>2018 - 3 & D Digital</p>
+                </div>
+        
+            </footer>
+</body>
+</html>
